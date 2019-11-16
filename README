@@ -1,0 +1,9 @@
+
+# Authentic vue experiment
+
+This is an experiment to show how one could go about implementing login in a
+Vue app using authentic.
+
+First stop is just the pure html implementation as shown on the blog: https://dry.ly/authentic
+
+Next step is integrating with vue.js
