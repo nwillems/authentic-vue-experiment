@@ -1,0 +1,18 @@
+{
+  "name": "scale-admin",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "wzrd index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "authentic-client": "nwillems/authentic-client",
+    "browserify": "^16.5.0",
+    "wzrd": "^1.5.0"
+  }
+}
