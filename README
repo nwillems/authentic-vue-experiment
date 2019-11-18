@@ -4,6 +4,12 @@
 This is an experiment to show how one could go about implementing login in a
 Vue app using authentic.
 
+== Disclaimer ==
+This is an experiment, and as such is not secure! Github has notified me of two
+potential security flaws, hoek and ecstatic, hoek being used as part of
+authentic-service in "scale-service", and ecstatic being used as part of wzdr
+in scale-admin. If time permits, these will be rectified.
+
 First stop is just the pure html implementation as shown on the blog: https://dry.ly/authentic
 
 Next step is integrating with vue.js
