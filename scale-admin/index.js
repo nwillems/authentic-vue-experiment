@@ -32,8 +32,17 @@ function protectedRoute (el) {
     el.innerHTML = [
       'You made it!',
       'authToken',
-      '<textarea class="topcoat-textarea" rows="8" cols="128">'+auth.authToken+'</textarea>'
-    ].join('<br/><br/>')
+      '<textarea class="topcoat-textarea" rows="8" cols="128">'+auth.authToken+'</textarea>',
+      '<textarea id="remotestuff" class="topcoat-textarea" rows="8" cols="128">Loading remote content</textarea>'
+    ].join('<br/><br/>');
+
+    auth.get("http://localhost:1338/", function(err, data){
+      if (err) {
+        document.getElementById("remotestuff").innerText = JSON.stringify(err);
+        return ;  
+      }
+      document.getElementById("remotestuff").innerText = JSON.stringify(data)
+    });
 }
   
 function signupRoute (el) {

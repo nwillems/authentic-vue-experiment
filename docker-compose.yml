@@ -1,0 +1,15 @@
+version: "3"
+
+services:
+  scale-auth:
+    build: ./scale-auth
+    ports:
+      - "1337:1337"
+  scale-admin:
+    build: ./scale-admin
+    ports:
+      - "9966:9966"
+  scale-service:
+    build: ./scale-service
+    ports:
+      - "1338:1338"
