@@ -6,6 +6,7 @@
       <li><router-link to="/signup">Signup</router-link></li>
       <li><router-link to="/protected">Protected</router-link></li>
       <li><button v-on:click="logout">Log out</button></li>
+      <li v-if="loggedin()">You are: {{ username() }}</li>
     </ul>
     <router-view></router-view>
   </div>
@@ -16,7 +17,12 @@
 export default {
   name: 'app',
   methods: {
-    logout: function(){}
+    username: function() { return this.$auth.email; },
+    loggedin: function() { return this.isLoggedIn(); },
+    logout: function(){
+      this.$auth.authToken = "";
+      this.$router.push("/")
+    }
   }
 }
 </script>

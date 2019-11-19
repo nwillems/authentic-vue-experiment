@@ -31,6 +31,9 @@ var auth = authenticClient({
 
 var authPlugin = {
   install: function(Vue, options) {
+    Vue.prototype.isLoggedIn = function(){
+      return !!options.auth.authToken;
+    }
     Vue.prototype.$auth = options.auth
   }
 }
